@@ -34,8 +34,8 @@ const calculateDateTimeOffset = (startDate, offset, offsetType) => {
 
 const formatDate = (resultType, calculatedOffset) => {
   switch (resultType) {
-    case 'D':
-      return calculatedOffset.toISOString().substring(0, 10);
+    case "D":
+      return format(calculatedOffset, "yyyy-MM-dd");
     case 'DT':
       return format(calculatedOffset, 'yyyy-MM-dd HH:mm:ss');
     case 'T':
